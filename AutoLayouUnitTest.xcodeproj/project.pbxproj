@@ -40,7 +40,6 @@
 		44979CAC20EE10F0003B18F7 = {
 			isa = PBXGroup;
 			children = (
-				44979CCA20EE1131003B18F7 /* AutoLayoutUnitTest.swift */,
 				44979CB720EE10F0003B18F7 /* AutoLayouUnitTest */,
 				44979CB620EE10F0003B18F7 /* Products */,
 			);
@@ -57,6 +56,7 @@
 		44979CB720EE10F0003B18F7 /* AutoLayouUnitTest */ = {
 			isa = PBXGroup;
 			children = (
+				44979CCA20EE1131003B18F7 /* AutoLayoutUnitTest.swift */,
 				44979CB820EE10F0003B18F7 /* AppDelegate.swift */,
 				44979CBA20EE10F0003B18F7 /* ViewController.swift */,
 				44979CBC20EE10F0003B18F7 /* Main.storyboard */,
