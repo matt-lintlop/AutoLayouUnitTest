@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        testViews = [blueView, greenView, blueView]
+        testViews = [blueView, greenView, redView]
 }
 
 
