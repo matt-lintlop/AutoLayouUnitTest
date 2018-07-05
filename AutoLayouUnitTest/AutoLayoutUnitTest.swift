@@ -16,24 +16,24 @@ func validateLayoutForView(_ view: UIView)  {
         view.setNeedsLayout()
         view.layoutIfNeeded()
         
-        guard view.hasAmbiguousLayout == true else {
+        if view.hasAmbiguousLayout == false  {
             // the view's auto layout is valid
-            assertionFailure("View AutoLayout Is Valid: \(view.accessibilityIdentifier ?? "?")")
+            print("View AutoLayout Is Valid: \(view.accessibilityIdentifier ?? "???")")
             return
         }
         let horizontalConstraints = view.constraintsAffectingLayout(for: .horizontal)
         horizontalConstraints.forEach { (constraint) in
-            assertionFailure("H constraint for view ID = \(view.accessibilityIdentifier ?? "?"): \(constraint)")
+            print("H constraint for view ID = \(view.accessibilityIdentifier ?? "?"): \(constraint)")
         }
         let verticalConstraints = view.constraintsAffectingLayout(for: .vertical)
         verticalConstraints.forEach { (constraint) in
-            assertionFailure("V constraint for view ID = \(view.accessibilityIdentifier ?? "?"): \(constraint)")
+            print("V constraint for view ID = \(view.accessibilityIdentifier ?? "?"): \(constraint)")
         }
         
         view.exerciseAmbiguityInLayout()
         CATransaction.flush()
         
-        assertionFailure("ERROR: View AutoLayout Is Invalid: \(view.accessibilityIdentifier ?? "?")")
+        print("ERROR: View AutoLayout Is Invalid: \(view.accessibilityIdentifier ?? "?")")
     }
 }
 

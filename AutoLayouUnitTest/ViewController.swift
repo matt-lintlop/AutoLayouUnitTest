@@ -11,17 +11,22 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var blueView: UIView!
-    @IBOutlet var redView: UIView!
-    @IBOutlet var greenView: UIView!
+    var testViews: [UIView]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        let testViews: [UIView] = [blueView, redView, greenView]
-        validateLayoutForViews(testViews)
+
+        testViews = [blueView]
+}
+
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    
+   }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        validateLayoutForViews(testViews!)
     }
-
-
 }
 

@@ -18,9 +18,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-Mk-zHt">
-                                <rect key="frame" x="72" y="53" width="240" height="128"/>
+                                <rect key="frame" x="10" y="30" width="240" height="128"/>
                                 <color key="backgroundColor" red="0.28196993860000003" green="0.31293170889999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <accessibility key="accessibilityConfiguration" identifier="blueView"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="1Af-uG-Lvu"/>
+                                    <constraint firstAttribute="height" constant="128" id="Wbw-89-F40"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcO-1j-W75">
                                 <rect key="frame" x="296" y="221" width="240" height="128"/>
@@ -35,25 +39,21 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="kcO-1j-W75" firstAttribute="top" secondItem="ofa-Mk-zHt" secondAttribute="bottom" constant="40" id="5dY-1H-7fW"/>
-                            <constraint firstItem="ofa-Mk-zHt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="BY5-c0-GeP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kcO-1j-W75" secondAttribute="trailing" constant="232" id="Ibk-G5-oOt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TBw-cz-Rcl" secondAttribute="bottom" constant="524" id="M9h-gT-uRC"/>
                             <constraint firstItem="TBw-cz-Rcl" firstAttribute="top" secondItem="kcO-1j-W75" secondAttribute="bottom" constant="23" id="NMY-rx-2Jc"/>
                             <constraint firstItem="TBw-cz-Rcl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="102" id="TyP-T4-ldd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TBw-cz-Rcl" secondAttribute="trailing" constant="426" id="boZ-AE-0BK"/>
                             <constraint firstItem="kcO-1j-W75" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="296" id="cnM-I9-qb9"/>
-                            <constraint firstItem="ofa-Mk-zHt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="jj4-U6-4jN"/>
+                            <constraint firstItem="ofa-Mk-zHt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="fA6-wW-liv"/>
                             <constraint firstItem="TBw-cz-Rcl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="372" id="lCL-nc-SAG"/>
+                            <constraint firstItem="ofa-Mk-zHt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ptq-Dg-hSZ"/>
                             <constraint firstItem="kcO-1j-W75" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="221" id="yFJ-mR-ZnU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ofa-Mk-zHt" secondAttribute="trailing" constant="456" id="yol-PD-ykR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="blueView" destination="8bC-Xf-vdC" id="ZHe-TM-A8P"/>
-                        <outlet property="greenView" destination="8bC-Xf-vdC" id="ekB-f5-bbI"/>
-                        <outlet property="redView" destination="8bC-Xf-vdC" id="cyA-ax-aFY"/>
+                        <outlet property="blueView" destination="ofa-Mk-zHt" id="afj-vI-2ss"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
