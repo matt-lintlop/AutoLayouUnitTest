@@ -11,12 +11,15 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet var blueView: UIView!
+    @IBOutlet weak var redView: UIView!
+    @IBOutlet weak var greenView: UIView!
+    
     var testViews: [UIView]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        testViews = [blueView]
+        testViews = [blueView, greenView, blueView]
 }
 
 
