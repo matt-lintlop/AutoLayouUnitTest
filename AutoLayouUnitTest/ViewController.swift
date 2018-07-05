@@ -10,9 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet var blueView: UIView!
+    @IBOutlet var redView: UIView!
+    @IBOutlet var greenView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+        let testViews: [UIView] = [blueView, redView, greenView]
+        validateLayoutForViews(testViews)
     }
 
 

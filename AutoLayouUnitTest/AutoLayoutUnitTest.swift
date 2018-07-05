@@ -11,7 +11,7 @@ import QuartzCore
 import Foundation
 
 // Validate the auto-layout of a view. Returns true if valid.
-func validateAutoLayoutForView(_ view: UIView)  {
+func validateLayoutForView(_ view: UIView)  {
     DispatchQueue.main.async {
         view.setNeedsLayout()
         view.layoutIfNeeded()
@@ -34,14 +34,15 @@ func validateAutoLayoutForView(_ view: UIView)  {
         CATransaction.flush()
         
         assertionFailure("ERROR: View AutoLayout Is Invalid: \(view.accessibilityIdentifier ?? "?")")
-  }
-
-// Validate the auto-layout of a list of views. Returns true if valid.
-func validateAutoLayoutForViews(_ views: [UIView]) -> Bool {
-    var result = true
-    views.forEach { (view) in
-        validateAutoLayoutForView(view)
-    }
-    return result
     }
 }
+
+// Validate the auto-layout of a list of views. Returns true if valid.
+func validateLayoutForViews(_ views: [UIView]) -> Bool {
+    var result = true
+    views.forEach { (view) in
+        validateLayoutForView(view)
+    }
+    return result
+}
+

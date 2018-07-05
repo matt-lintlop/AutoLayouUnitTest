@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +12,49 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AutoLayouUnitTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-Mk-zHt">
+                                <rect key="frame" x="72" y="53" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.28196993860000003" green="0.31293170889999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="blueView"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcO-1j-W75">
+                                <rect key="frame" x="296" y="221" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.1366132306" blue="0.083994865449999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="redView"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TBw-cz-Rcl">
+                                <rect key="frame" x="102" y="372" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.60656844889999995" green="1" blue="0.32682848190000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" identifier="greenView"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kcO-1j-W75" firstAttribute="top" secondItem="ofa-Mk-zHt" secondAttribute="bottom" constant="40" id="5dY-1H-7fW"/>
+                            <constraint firstItem="ofa-Mk-zHt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="33" id="BY5-c0-GeP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kcO-1j-W75" secondAttribute="trailing" constant="232" id="Ibk-G5-oOt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="TBw-cz-Rcl" secondAttribute="bottom" constant="524" id="M9h-gT-uRC"/>
+                            <constraint firstItem="TBw-cz-Rcl" firstAttribute="top" secondItem="kcO-1j-W75" secondAttribute="bottom" constant="23" id="NMY-rx-2Jc"/>
+                            <constraint firstItem="TBw-cz-Rcl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="102" id="TyP-T4-ldd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TBw-cz-Rcl" secondAttribute="trailing" constant="426" id="boZ-AE-0BK"/>
+                            <constraint firstItem="kcO-1j-W75" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="296" id="cnM-I9-qb9"/>
+                            <constraint firstItem="ofa-Mk-zHt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="72" id="jj4-U6-4jN"/>
+                            <constraint firstItem="TBw-cz-Rcl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="372" id="lCL-nc-SAG"/>
+                            <constraint firstItem="kcO-1j-W75" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="221" id="yFJ-mR-ZnU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ofa-Mk-zHt" secondAttribute="trailing" constant="456" id="yol-PD-ykR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="blueView" destination="8bC-Xf-vdC" id="ZHe-TM-A8P"/>
+                        <outlet property="greenView" destination="8bC-Xf-vdC" id="ekB-f5-bbI"/>
+                        <outlet property="redView" destination="8bC-Xf-vdC" id="cyA-ax-aFY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
